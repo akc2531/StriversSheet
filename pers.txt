@@ -1,3 +1,9 @@
 Do not use i++ in recursion
 
-Do remeber factorial and its listing conditioon
+Do remeber factorial and its listing condition
+
+Hashing in Java:-
+
+  HashMap<Integer, Integer> hmap = new HashMap<Integer, Integer>();  Declaration
+  hmap.put(arr[0], 1);  It will put 1 at oth postion in array
+  hmap.get(arr[0]); Throough this we will get array value which is present in 0th position
