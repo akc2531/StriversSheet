@@ -20,3 +20,34 @@ We can create a java program to sort array elements using insertion sort. Insert
 
 To sort an array of size N in ascending order iterate over the array and compare the current element (key) to its predecessor, if the key element is smaller than its predecessor, compare it to the elements before. Move the greater elements one position up to make space for the swapped element.
 CheckSortedArray -- Fact- Fibonacci -Impt.
+
+Java to remoove duplicate elements in java:---
+
+The issue with your code is that you are modifying the ArrayList (`arr`) while iterating through it, and this can lead to unexpected behavior. When you remove an element from the ArrayList, it shifts the indices of the elements to the right of the removed element. As a result, you may skip checking some elements or encounter an `IndexOutOfBoundsException`.
+
+To avoid this issue and correctly remove duplicates from the ArrayList, you should iterate through the ArrayList in reverse order. Here's a modified version of your code:
+
+```java
+import java.util.ArrayList;
+
+public class Solution {
+    public static int removeDuplicates(ArrayList<Integer> arr, int n) {
+        for (int i = arr.size() - 1; i >= 0; i--) {
+            for (int j = i - 1; j >= 0; j--) {
+                if (arr.get(i).equals(arr.get(j))) {
+                    arr.remove(i);
+                    break; // Exit the inner loop after removing the duplicate
+                }
+            }
+        }
+        return arr.size();
+    }
+}
+```
+
+In this modified code:
+
+1. We iterate through the ArrayList in reverse order to avoid index shifting issues.
+2. When we find a duplicate, we remove it from the ArrayList and then exit the inner loop using `break`.
+
+This should correctly remove duplicates from the ArrayList without causing unexpected behavior, and it will return the expected output.
