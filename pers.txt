@@ -7,3 +7,15 @@ Hashing in Java:-
   HashMap<Integer, Integer> hmap = new HashMap<Integer, Integer>();  Declaration
   hmap.put(arr[0], 1);  Here 1 is key of array[0]
   hmap.get(arr[0]); Throough this we will get array value which is present in 0th position
+
+
+Sorting in java:---
+1)Selection Sort :- Firts we will select first element which is present at first index that is 0 and then compare with all its value and find out smallest or largest and then swap values accordingly and after that pointer will be at second index that is 1 and we will select then all the values and search for corresponding smallest or largest according and the process will continue so on ......
+
+2)Bubble Sort :-  
+In bubble sort algorithm, array is traversed from first element to last element. Here, current element is compared with the next element. If current element is greater than the next element, it is swapped.
+
+3)Insertion Sort :-
+We can create a java program to sort array elements using insertion sort. Insertion is good for small elements only because it requires more time for sorting large number of elements.
+
+To sort an array of size N in ascending order iterate over the array and compare the current element (key) to its predecessor, if the key element is smaller than its predecessor, compare it to the elements before. Move the greater elements one position up to make space for the swapped element.
