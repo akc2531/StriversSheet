@@ -25,6 +25,13 @@ Java to remoove duplicate elements in java:---
 
 The issue with your code is that you are modifying the ArrayList (`arr`) while iterating through it, and this can lead to unexpected behavior. When you remove an element from the ArrayList, it shifts the indices of the elements to the right of the removed element. As a result, you may skip checking some elements or encounter an `IndexOutOfBoundsException`.
 
+ArrayList:---
+
+If there is Array given int[] gg(int arr[])
+1)We have to declare package import java.util.ArrayLsit;
+2)We have to write List a=Arrays.asList(arr);
+3)Now we have converted to List
+
 To avoid this issue and correctly remove duplicates from the ArrayList, you should iterate through the ArrayList in reverse order. Here's a modified version of your code:
 
 ```java
