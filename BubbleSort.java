@@ -1,7 +1,7 @@
 public class Solution {
     public static int[] bubbleSort(int[] arr, int n) {
         //Your code goes here
-        for(int i=0;i<arr.length;i++)
+        for(int i=0;i<arr.length-1;i++)
         {
             for(int j=0;j<n-i-1;j++)
             {
